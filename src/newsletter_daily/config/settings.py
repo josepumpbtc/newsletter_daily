@@ -1,4 +1,4 @@
-"""�-Mn - / .env ����"""
+"""配置管理 - 从 .env 加载环境变量"""
 
 from functools import lru_cache
 from pathlib import Path
@@ -9,7 +9,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 def _project_root() -> Path:
-    # src/newsletter_daily/config/settings.py -> parents[3] = y�9
+    # src/newsletter_daily/config/settings.py -> parents[3] = 项目根
     return Path(__file__).resolve().parents[3]
 
 
@@ -21,7 +21,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    timezone: str = Field(default="Asia/Hong_Kong", description="��:")
+    timezone: str = Field(default="Asia/Hong_Kong", description="时区")
     newsletter_hour: int = Field(default=10, ge=0, le=23)
     newsletter_minute: int = Field(default=0, ge=0, le=59)
 

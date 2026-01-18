@@ -1,4 +1,4 @@
-"""� sources.yaml �}Mnv�@	�/(6�h"""
+"""从 sources.yaml 加载配置并执行采集"""
 
 from pathlib import Path
 from typing import Any
@@ -14,7 +14,7 @@ import newsletter_daily.collectors.the_information_collector  # noqa: F401
 
 
 def _config_default_path() -> Path:
-    # core/gather.py -> parents[2]=src, [3]=y�9
+    # core/gather.py -> parents[2]=src, [3]=项目根
     return Path(__file__).resolve().parents[3] / "config" / "sources.yaml"
 
 

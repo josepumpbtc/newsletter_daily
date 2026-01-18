@@ -1,4 +1,4 @@
-"""�� 10 �v��"""
+"""定时任务：每天 10 点执行"""
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
